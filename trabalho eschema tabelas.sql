@@ -3,13 +3,12 @@ create database clinica
     ENCODING = 'UTF-8'
 ;
 
-
 create table paciente(
-    id serial PRIMARY KEY,  
-    nome varchar(40), --
-    sexo char, --
-    numero_cel char(11), --
-    email varchar(50), --
+    cpf char(12) PRIMARY KEY,  
+    nome varchar(40), 
+    sexo char, 
+    numero_cel char(11), 
+    email varchar(50), 
     data_nasci date, 
     peso float,
     numero_casa int,
@@ -24,6 +23,7 @@ create table medico(
     nome varchar(40),
     email varchar(50),
     cfm int,
+    efetivado boolean,
     contrato text,
     especializacao varchar(50),
     horario_trabalho varchar(50),
@@ -61,10 +61,10 @@ create table consulta(
     obsevacao text,
     diagnostico text,
     id_medico int,
-    id_paciente int,
+    cpf_paciente char(12),
     id_recepcionista int, 
     data_hora date,
     CONSTRAINT medico_consulta FOREIGN KEY (id_medico) REFERENCES medico(id),
-    CONSTRAINT paciente_consulta foreign key (id_paciente) REFERENCES paciente(id),
+    CONSTRAINT paciente_consulta foreign key (cpf_paciente) REFERENCES paciente(cpf),
     CONSTRAINT recepcionista_consulta foreign key (id_recepcionista) REFERENCES recepcionista(id)
 );
