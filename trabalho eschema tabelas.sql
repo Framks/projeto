@@ -2,6 +2,7 @@ create database clinica
     OWNER = postgres
     ENCODING = 'UTF-8'
 ;
+drop database clinica;
 
 create table paciente(
     cpf char(12) PRIMARY KEY,  
@@ -19,10 +20,9 @@ create table paciente(
 );
 
 create table medico(
-    id serial PRIMARY KEY,
+    cfm int PRIMARY KEY,
     nome varchar(40),
     email varchar(50),
-    cfm int,
     efetivado boolean,
     contrato text,
     especializacao varchar(50),
@@ -36,7 +36,7 @@ create table medico(
 );
 
 create table recepcionista(
-    id serial PRIMARY KEY,
+    cpf int PRIMARY KEY,
     nome varchar(50),
     email varchar(50),
     senha varchar(256),
@@ -45,26 +45,27 @@ create table recepcionista(
     rua varchar(35),
     bairro varchar(35),
     cidade varchar(25),
-    ponto_ref varchar(100)
+    ponto_ref varchar(100),
+    efetivado boolean 
 );
 
 create table receita(
     id serial PRIMARY KEY,
     remedio varchar(50),
     modo_uso text,
-    id_medico int,
-    CONSTRAINT medico_receita FOREIGN KEY (id_medico) REFERENCES medico(id)
+    cfm_medico int,
+    CONSTRAINT medico_receita FOREIGN KEY (cfm_medico) REFERENCES medico(cfm) on delete cascade
 );
 
 create table consulta(
     id serial PRIMARY KEY,
     obsevacao text,
     diagnostico text,
-    id_medico int,
+    cfm_medico int,
     cpf_paciente char(12),
     id_recepcionista int, 
     data_hora date,
-    CONSTRAINT medico_consulta FOREIGN KEY (id_medico) REFERENCES medico(id),
-    CONSTRAINT paciente_consulta foreign key (cpf_paciente) REFERENCES paciente(cpf),
-    CONSTRAINT recepcionista_consulta foreign key (id_recepcionista) REFERENCES recepcionista(id)
+    CONSTRAINT medico_consulta FOREIGN KEY (cfm_medico) REFERENCES medico(cfm) on delete cascade,
+    CONSTRAINT paciente_consulta foreign key (cpf_paciente) REFERENCES paciente(cpf) on delete cascade,
+    CONSTRAINT recepcionista_consulta foreign key (id_recepcionista) REFERENCES recepcionista(id) on delete cascade
 );
