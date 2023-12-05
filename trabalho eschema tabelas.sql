@@ -51,17 +51,17 @@ create table receita(
     id serial PRIMARY KEY,
     remedio varchar(50),
     modo_uso text,
-    cfm_medico char(11),
-    id_consulta int
+    cfm_medico char(11) references medico(cfm) delete on cascade,
+    id_consulta int references consulta(id) delete on cascade
 );
 
 create table consulta(
     id serial PRIMARY KEY,
     obsevacao text,
     diagnostico text,
-    cfm_medico char(11),
-    cpf_paciente char(11),
-    id_recepcionista char(11), 
+    cfm_medico char(11) references medico(cfm) delete on cascade,
+    cpf_paciente char(11) references paciente(cpf) delete on cascade,
+    cpf_recepcionista char(11) references recepcionista(cpf) delete on cascade, 
     data_hora date
 );
 
