@@ -65,5 +65,8 @@ create table consulta(
     data_hora date
 );
 
-create view consulta_por_medico (cfm, id_consulta,cpf_paciente, data_hora) as
-select m.cfm , c.id , cpf_paciente, data_hora from consulta c join medico m on c.cfm_medico = m.cfm;
+create view receita_por_medico (cfm, quant_receitas) as
+select m.cfm , count(r.id) from receita r join medico m on r.cfm_medico = m.cfm group by m.cfm;
+
+create view consulta_por_paciente (cpf, id_consulta, cfm_medico, nome_medico, data_hora) as
+select p.cpf, c.id, c.cfm_medico, m.nome, c.data_hora from (consulta c join paciente p on c.cpf_paciente = p.cpf) join medico m on c.cfm_medico = m.cfm;
