@@ -37,7 +37,7 @@ VALUES
 (90123456789, 'Fernanda Lima', 'fernanda@email.com', 'hash_da_senha_9', 'Contrato PQR', 369, 'Rua I', 'Centro', 'Cidade C', 'Ao lado da clínica', true),
 (12345678900, 'Gabriel Santos', 'gabriel@email.com', 'hash_da_senha_10', 'Contrato LMN', 852, 'Rua J', 'Bairro X', 'Cidade A', 'Próximo à academia', true);
 
-INSERT INTO consulta (obsevacao, diagnostico, cfm_medico, cpf_paciente, id_recepcionista, data_hora) 
+INSERT INTO consulta (obsevacao, diagnostico, cfm_medico, cpf_paciente, cpf_recepcionista, data_hora) 
 VALUES 
 ('Paciente com febre alta', 'Gripe', 12345, '12345678901', 12345678901, '2023-01-15 10:00:00'),
 ('Paciente com dor de cabeça persistente', 'Enxaqueca', 23456, '23456789012', 23456789012, '2023-02-20 11:30:00'),
