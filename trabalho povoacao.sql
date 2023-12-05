@@ -1,66 +1,104 @@
+INSERT INTO paciente (cpf, nome, sexo, numero_cel, email, data_nasci, peso, numero_casa, rua, bairro, cidade, ponto_ref) 
+VALUES 
+(12345678901, 'João Silva', 'M', '11223344556', 'joao@email.com', '1990-05-15', 75.5, 123, 'Rua A', 'Centro', 'Cidade A', 'Próximo ao mercado'),
+(23456789012, 'Maria Souza', 'F', '99887766554', 'maria@email.com', '1985-09-20', 60.2, 456, 'Rua B', 'Bairro X', 'Cidade B', 'Ao lado da escola'),
+(34567890123, 'Pedro Oliveira', 'M', '55443322111', 'pedro@email.com', '2000-12-10', 80.0, 789, 'Rua C', 'Bairro Y', 'Cidade C', 'Em frente à praça'),
+(45678901234, 'Ana Santos', 'F', '11223344550', 'ana@email.com', '1995-07-30', 65.8, 321, 'Rua D', 'Bairro Z', 'Cidade A', 'Na esquina da rua principal'),
+(56789012345, 'Carlos Pereira', 'M', '99887766550', 'carlos@email.com', '1988-03-25', 70.1, 654, 'Rua E', 'Centro', 'Cidade B', 'Próximo ao hospital'),
+(67890123456, 'Julia Costa', 'F', '55443322000', 'julia@email.com', '1992-11-18', 55.5, 987, 'Rua F', 'Bairro X', 'Cidade C', 'Perto do campo de futebol'),
+(78901234567, 'Rafaela Oliveira', 'F', '11223344000', 'rafaela@email.com', '2002-04-05', 68.3, 159, 'Rua G', 'Bairro Y', 'Cidade A', 'Na entrada da rua'),
+(89012345678, 'Gabriel Almeida', 'M', '99887766000', 'gabriel@email.com', '1998-08-12', 72.7, 753, 'Rua H', 'Bairro Z', 'Cidade B', 'Perto do supermercado'),
+(90123456789, 'Fernanda Lima', 'F', '55443322001', 'fernanda@email.com', '1993-12-28', 63.0, 369, 'Rua I', 'Centro', 'Cidade C', 'Ao lado do banco'),
+(12345678900, 'Lucas Santos', 'M', '11223344551', 'lucas@email.com', '1987-06-07', 67.5, 852, 'Rua J', 'Bairro X', 'Cidade A', 'Próximo à farmácia');
 
-INSERT INTO paciente 
-VALUES ('12345678901', 'Maria Silva', 'F', '11987654321', 'maria@email.com', '1990-05-15', 65.5, 123, 'Rua A', 'Centro', 'São Paulo', 'Próximo à padaria');
-INSERT INTO paciente 
-VALUES ('23456789012', 'João Souza', 'M', '11901234567', 'joao@email.com', '1985-10-20', 80.2, 456, 'Rua B', 'Jardim', 'Rio de Janeiro', 'Próximo ao parque');
-INSERT INTO paciente 
-VALUES ('34567890123', 'Ana Oliveira', 'F', '11999998888', 'ana@email.com', '2000-12-03', 55.0, 789, 'Rua C', 'Liberdade', 'Salvador', 'Próximo ao mercado');
-INSERT INTO paciente 
-VALUES ('45678901234', 'Pedro Santos', 'M', '11888887777', 'pedro@email.com', '1978-08-28', 75.3, 1011, 'Rua D', 'Floresta', 'Belo Horizonte', 'Próximo à escola');
-INSERT INTO paciente 
-VALUES ('56789012345', 'Carla Ferreira', 'F', '11777776666', 'carla@email.com', '1995-04-12', 60.0, 1213, 'Rua E', 'Boa Vista', 'Porto Alegre', 'Próximo ao hospital');
-INSERT INTO paciente 
-VALUES ('67890123456', 'Lucas Mendes', 'M', '11666665555', 'lucas@email.com', '1989-07-30', 70.8, 1415, 'Rua F', 'Centro', 'Curitiba', 'Próximo à praça');
-INSERT INTO paciente 
-VALUES ('78901234567', 'Mariana Costa', 'F', '11555554444', 'mariana@email.com', '2002-09-18', 58.5, 1617, 'Rua G', 'Barra', 'Fortaleza', 'Próximo à estação de metrô');
-INSERT INTO paciente 
-VALUES ('89012345678', 'Gustavo Almeida', 'M', '11444443333', 'gustavo@email.com', '1980-03-25', 90.0, 1819, 'Rua H', 'Santa Cruz', 'Recife', 'Próximo à praia');
-INSERT INTO paciente 
-VALUES ('90123456789', 'Camila Lima', 'F', '11333332222', 'camila@email.com', '1998-11-07', 62.7, 2021, 'Rua I', 'Vila Nova', 'Brasília', 'Próximo ao shopping');
-INSERT INTO paciente 
-VALUES ('01234567890', 'Rafael Oliveira', 'M', '11222221111', 'rafael@email.com', '1987-06-22', 78.9, 2223, 'Rua J', 'Copacabana', 'Rio de Janeiro', 'Próximo à praia');
+INSERT INTO medico (cfm, nome, email, efetivado, contrato, especializacao, horario_trabalho, numero_cel, numero_casa, rua, bairro, cidade, ponto_ref) 
+VALUES 
+(12345, 'Dr. José Silva', 'jose@email.com', true, 'Contrato XYZ', 'Clínico Geral', 'Segunda a sexta, 8h às 17h', '11223344556', 123, 'Rua A', 'Centro', 'Cidade A', 'Próximo ao hospital'),
+(23456, 'Dra. Ana Souza', 'ana@email.com', true, 'Contrato ABC', 'Pediatra', 'Segunda a sexta, 9h às 18h', '99887766554', 456, 'Rua B', 'Bairro X', 'Cidade B', 'Ao lado da clínica'),
+(34567, 'Dr. Marcos Oliveira', 'marcos@email.com', true, 'Contrato PQR', 'Cardiologista', 'Segunda a sexta, 7h às 16h', '55443322111', 789, 'Rua C', 'Bairro Y', 'Cidade C', 'Em frente ao posto de saúde'),
+(45678, 'Dra. Carla Santos', 'carla@email.com', true, 'Contrato LMN', 'Dermatologista', 'Segunda a sexta, 10h às 19h', '11223344550', 321, 'Rua D', 'Bairro Z', 'Cidade A', 'Na esquina do centro médico'),
+(56789, 'Dr. Lucas Pereira', 'lucas@email.com', true, 'Contrato RST', 'Oftalmologista', 'Segunda a sexta, 8h às 17h', '99887766550', 654, 'Rua E', 'Centro', 'Cidade B', 'Próximo à clínica oftalmológica'),
+(67890, 'Dra. Paula Costa', 'paula@email.com', true, 'Contrato UVW', 'Ginecologista', 'Segunda a sexta, 9h às 18h', '55443322000', 987, 'Rua F', 'Bairro X', 'Cidade C', 'Perto do hospital municipal'),
+(78901, 'Dr. Rafael Oliveira', 'rafael@email.com', true, 'Contrato XYZ', 'Ortopedista', 'Segunda a sexta, 7h às 16h', '11223344000', 159, 'Rua G', 'Bairro Y', 'Cidade A', 'Na entrada da cidade'),
+(89012, 'Dra. Laura Almeida', 'laura@email.com', true, 'Contrato ABC', 'Neurologista', 'Segunda a sexta, 10h às 19h', '99887766000', 753, 'Rua H', 'Bairro Z', 'Cidade B', 'Próximo à clínica neurologica'),
+(90123, 'Dr. Gustavo Lima', 'gustavo@email.com', true, 'Contrato PQR', 'Psiquiatra', 'Segunda a sexta, 8h às 17h', '55443322001', 369, 'Rua I', 'Centro', 'Cidade C', 'Ao lado do hospital psiquiátrico'),
+(12340, 'Dra. Marina Santos', 'marina@email.com', true, 'Contrato LMN', 'Oncologista', 'Segunda a sexta, 9h às 18h', '11223344551', 852, 'Rua J', 'Bairro X', 'Cidade A', 'Próximo à clínica de oncologia');
 
+INSERT INTO recepcionista (cpf, nome, email, senha, contrato, numero_casa, rua, bairro, cidade, ponto_ref, efetivado) 
+VALUES 
+(12345678901, 'Ana Silva', 'ana@email.com', 'hash_da_senha_1', 'Contrato XYZ', 123, 'Rua A', 'Centro', 'Cidade A', 'Próximo ao escritório', true),
+(23456789012, 'Carlos Souza', 'carlos@email.com', 'hash_da_senha_2', 'Contrato ABC', 456, 'Rua B', 'Bairro X', 'Cidade B', 'Ao lado do mercado', true),
+(34567890123, 'Mariana Oliveira', 'mariana@email.com', 'hash_da_senha_3', 'Contrato PQR', 789, 'Rua C', 'Bairro Y', 'Cidade C', 'Perto da farmácia', true),
+(45678901234, 'Pedro Santos', 'pedro@email.com', 'hash_da_senha_4', 'Contrato LMN', 321, 'Rua D', 'Bairro Z', 'Cidade A', 'Próximo ao banco', true),
+(56789012345, 'Camila Pereira', 'camila@email.com', 'hash_da_senha_5', 'Contrato RST', 654, 'Rua E', 'Centro', 'Cidade B', 'Ao lado do restaurante', true),
+(67890123456, 'Rafael Costa', 'rafael@email.com', 'hash_da_senha_6', 'Contrato UVW', 987, 'Rua F', 'Bairro X', 'Cidade C', 'Perto do hospital', true),
+(78901234567, 'Luisa Oliveira', 'luisa@email.com', 'hash_da_senha_7', 'Contrato XYZ', 159, 'Rua G', 'Bairro Y', 'Cidade A', 'Próximo à praça', true),
+(89012345678, 'João Almeida', 'joao@email.com', 'hash_da_senha_8', 'Contrato ABC', 753, 'Rua H', 'Bairro Z', 'Cidade B', 'Perto da escola', true),
+(90123456789, 'Fernanda Lima', 'fernanda@email.com', 'hash_da_senha_9', 'Contrato PQR', 369, 'Rua I', 'Centro', 'Cidade C', 'Ao lado da clínica', true),
+(12345678900, 'Gabriel Santos', 'gabriel@email.com', 'hash_da_senha_10', 'Contrato LMN', 852, 'Rua J', 'Bairro X', 'Cidade A', 'Próximo à academia', true);
 
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dr. João Médico', 11, 'joao_medico@email.com', 123456, 'CLT', 'Cardiologia', 'Segunda a Sexta, 8h-16h', '12345678901');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dra. Maria Médica', 12, 'maria_medica@email.com', 789012, 'PJ', 'Pediatria', 'Segunda, Quarta e Sexta, 9h-17h', '98765432101');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dr. Pedro Cardiologista', 13, 'pedro_cardiologista@email.com', 345678, 'CLT', 'Cardiologia', 'Terça e Quinta, 10h-18h', '11223344556');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dra. Ana Pediatra', 14, 'ana_pediatra@email.com', 987654, 'PJ', 'Pediatria', 'Segunda, Quarta e Sexta, 9h-17h', '99887766554');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dr. Carlos Cirurgião', 15, 'carlos_cirurgiao@email.com', 456789, 'CLT', 'Cirurgia Geral', 'Terça e Quinta, 10h-18h', '12398765432');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dra. Lúcia Dermatologista', 16, 'lucia_dermatologista@email.com', 345678, 'CLT', 'Dermatologia', 'Segunda a Sexta, 8h-16h', '10293847565');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dr. José Ortopedista', 17, 'jose_ortopedista@email.com', 567890, 'PJ', 'Ortopedia', 'Terça e Quinta, 9h-17h', '11224488900');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dra. Sofia Ginecologista', 18, 'sofia_ginecologista@email.com', 678901, 'CLT', 'Ginecologia', 'Segunda a Sexta, 8h-16h', '98776655443');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dr. Miguel Psiquiatra', 19, 'miguel_psiquiatra@email.com', 789012, 'PJ', 'Psiquiatria', 'Terça e Quinta, 10h-18h', '12347859611');
-INSERT INTO medico (nome, id_endereco, email, cfm, contrato, especializacao, horario_trabalho, numero_cel) VALUES ('Dra. Rita Oftalmologista', 20, 'rita_oftalmologista@email.com', 890123, 'CLT', 'Oftalmologia', 'Segunda a Sexta, 8h-16h', '99887766554');
+INSERT INTO consulta (obsevacao, diagnostico, cfm_medico, cpf_paciente, id_recepcionista, data_hora) 
+VALUES 
+('Paciente com febre alta', 'Gripe', 12345, '12345678901', 1, '2023-01-15 10:00:00'),
+('Paciente com dor de cabeça persistente', 'Enxaqueca', 23456, '23456789012', 2, '2023-02-20 11:30:00'),
+('Paciente com histórico de pressão alta', 'Hipertensão', 34567, '34567890123', 3, '2023-03-10 14:45:00'),
+('Paciente relatando dores no peito', 'Possível problema cardíaco', 45678, '45678901234', 4, '2023-04-05 09:20:00'),
+('Paciente com dificuldades de visão', 'Prescrição para óculos', 56789, '56789012345', 5, '2023-05-12 15:10:00'),
+('Paciente com suspeita de gravidez', 'Realizar teste de gravidez', 67890, '67890123456', 6, '2023-06-18 08:50:00'),
+('Paciente com dor no joelho esquerdo', 'Possível lesão no ligamento', 78901, '78901234567', 7, '2023-07-23 10:30:00'),
+('Paciente com histórico de enxaqueca', 'Prescrição de medicamento', 89012, '89012345678', 8, '2023-08-30 13:15:00'),
+('Paciente com histórico de depressão', 'Avaliação psicológica', 90123, '90123456789', 9, '2023-09-05 11:40:00'),
+('Paciente com suspeita de câncer', 'Encaminhamento para especialista', 12340, '12345678900', 10, '2023-10-11 09:00:00'),
+('Paciente com febre alta', 'Gripe', 12345, '12345678901', 1, '2023-11-15 10:00:00'),
+('Paciente com dor de cabeça persistente', 'Enxaqueca', 23456, '23456789012', 2, '2023-12-20 11:30:00'),
+('Paciente com histórico de pressão alta', 'Hipertensão', 34567, '34567890123', 3, '2023-01-10 14:45:00'),
+('Paciente relatando dores no peito', 'Possível problema cardíaco', 45678, '45678901234', 4, '2023-02-05 09:20:00'),
+('Paciente com dificuldades de visão', 'Prescrição para óculos', 56789, '56789012345', 5, '2023-03-12 15:10:00'),
+('Paciente com suspeita de gravidez', 'Realizar teste de gravidez', 67890, '67890123456', 6, '2023-04-18 08:50:00'),
+('Paciente com dor no joelho esquerdo', 'Possível lesão no ligamento', 78901, '78901234567', 7, '2023-05-23 10:30:00'),
+('Paciente com histórico de enxaqueca', 'Prescrição de medicamento', 89012, '89012345678', 8, '2023-06-30 13:15:00'),
+('Paciente com histórico de depressão', 'Avaliação psicológica', 90123, '90123456789', 9, '2023-07-05 11:40:00'),
+('Paciente com suspeita de câncer', 'Encaminhamento para especialista', 12340, '12345678900', 10, '2023-08-11 09:00:00'),
+('Paciente com febre alta', 'Gripe', 12345, '12345678901', 1, '2023-09-15 10:00:00'),
+('Paciente com dor de cabeça persistente', 'Enxaqueca', 23456, '23456789012', 2, '2023-10-20 11:30:00'),
+('Paciente com histórico de pressão alta', 'Hipertensão', 34567, '34567890123', 3, '2023-11-10 14:45:00'),
+('Paciente relatando dores no peito', 'Possível problema cardíaco', 45678, '45678901234', 4, '2023-12-05 09:20:00'),
+('Paciente com dificuldades de visão', 'Prescrição para óculos', 56789, '56789012345', 5, '2024-01-12 15:10:00'),
+('Paciente com suspeita de gravidez', 'Realizar teste de gravidez', 67890, '67890123456', 6, '2024-02-18 08:50:00'),
+('Paciente com dor no joelho esquerdo', 'Possível lesão no ligamento', 78901, '78901234567', 7, '2024-03-23 10:30:00'),
+('Paciente com histórico de enxaqueca', 'Prescrição de medicamento', 89012, '89012345678', 8, '2024-04-30 13:15:00'),
+('Paciente com histórico de depressão', 'Avaliação psicológica', 90123, '90123456789', 9, '2024-05-05 11:40:00'),
+('Paciente com suspeita de câncer', 'Encaminhamento para especialista', 12340, '12345678900', 10, '2024-06-11 09:00:00');
 
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 1', 5, 'CLT');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 2', 6, 'CLT');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 3', 7, 'PJ');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 4', 8, 'CLT');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 5', 9, 'PJ');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 6', 10, 'CLT');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 7', 11, 'CLT');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 8', 12, 'PJ');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 9', 13, 'CLT');
-INSERT INTO recepcionista (nome, id_endereco, contrato) VALUES ('Recepcionista 10', 14, 'PJ');
-
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Paracetamol', 'Tomar um comprimido a cada 6 horas', 1);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Amoxicilina', 'Tomar um comprimido a cada 8 horas', 2);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Ibuprofeno', 'Tomar um comprimido a cada 6 horas', 3);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Dipirona', 'Tomar um comprimido a cada 4 horas', 4);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Omeprazol', 'Tomar um comprimido antes do café da manhã', 5);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Cetirizina', 'Tomar um comprimido antes de dormir', 6);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Loratadina', 'Tomar um comprimido de manhã', 7);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Sinvastatina', 'Tomar um comprimido à noite', 8);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Metformina', 'Tomar um comprimido após as refeições', 9);
-INSERT INTO receita (remedio, modo_uso, id_medico) VALUES ('Losartana', 'Tomar um comprimido de manhã', 10);
-
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Paciente com febre e dor de cabeça', 'Suspeita de gripe', 1, 1, 1, '2023-10-28 09:00:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Exame de rotina', 'Sem problemas de saúde identificados', 2, 2, 2, '2023-10-28 10:15:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Dor abdominal intensa', 'Possível apendicite', 3, 3, 3, '2023-10-28 11:30:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Lesão no tornozelo', 'Entorse moderado', 4, 4, 4, '2023-10-28 13:45:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Receita para refluxo', 'Prescrição de medicamento', 5, 5, 5, '2023-10-28 15:00:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Exame de alergia', 'Sem alergias identificadas', 6, 6, 6, '2023-10-29 09:30:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Dor de ouvido', 'Infecção no ouvido', 7, 7, 7, '2023-10-29 11:45:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Acompanhamento para colesterol', 'Ajuste na dieta recomendado', 8, 8, 8, '2023-10-29 14:00:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Avaliação psicológica', 'Transtorno de ansiedade identificado', 9, 9, 9, '2023-10-30 10:00:00');
-INSERT INTO consulta (obsevacao, diagnostico, id_medico, id_paciente, id_recepcionista, data_hora) VALUES ('Exame de visão', 'Necessidade de óculos prescrita', 10, 10, 10, '2023-10-30 12:15:00');
+INSERT INTO receita (remedio, modo_uso, cfm_medico, id_consulta) 
+VALUES 
+('Paracetamol', 'Tomar 1 comprimido a cada 6 horas', 12345, 1),
+('Ibuprofeno', 'Tomar 1 comprimido de 8 em 8 horas após a refeição', 23456, 2),
+('Losartana', 'Tomar 1 comprimido ao acordar', 34567, 3),
+('Aspirina', 'Tomar 1 comprimido após as refeições', 45678, 4),
+('Óculos de grau', 'Utilizar diariamente para leitura e atividades visuais', 56789, 5),
+('Exame de gravidez', 'Realizar o exame de urina para confirmar gravidez', 67890, 6),
+('Repouso e gelo', 'Aplicar gelo no joelho 3 vezes ao dia e repousar', 78901, 7),
+('Rivotril', 'Tomar 1 comprimido antes de dormir', 89012, 8),
+('Sessões de terapia', 'Agendar sessões semanais para acompanhamento', 90123, 9),
+('Encaminhamento para oncologista', 'Realizar consulta com especialista para diagnóstico', 12340, 10),
+('Paracetamol', 'Tomar 1 comprimido a cada 6 horas', 12345, 11),
+('Ibuprofeno', 'Tomar 1 comprimido de 8 em 8 horas após a refeição', 23456, 12),
+('Losartana', 'Tomar 1 comprimido ao acordar', 34567, 13),
+('Aspirina', 'Tomar 1 comprimido após as refeições', 45678, 14),
+('Óculos de grau', 'Utilizar diariamente para leitura e atividades visuais', 56789, 15),
+('Exame de gravidez', 'Realizar o exame de urina para confirmar gravidez', 67890, 16),
+('Repouso e gelo', 'Aplicar gelo no joelho 3 vezes ao dia e repousar', 78901, 17),
+('Rivotril', 'Tomar 1 comprimido antes de dormir', 89012, 18),
+('Sessões de terapia', 'Agendar sessões semanais para acompanhamento', 90123, 19),
+('Encaminhamento para oncologista', 'Realizar consulta com especialista para diagnóstico', 12340, 20),
+('Paracetamol', 'Tomar 1 comprimido a cada 6 horas', 12345, 21),
+('Ibuprofeno', 'Tomar 1 comprimido de 8 em 8 horas após a refeição', 23456, 22),
+('Losartana', 'Tomar 1 comprimido ao acordar', 34567, 23),
+('Aspirina', 'Tomar 1 comprimido após as refeições', 45678, 24),
+('Óculos de grau', 'Utilizar diariamente para leitura e atividades visuais', 56789, 25),
+('Exame de gravidez', 'Realizar o exame de urina para confirmar gravidez', 67890, 26),
+('Repouso e gelo', 'Aplicar gelo no joelho 3 vezes ao dia e repousar', 78901, 27),
+('Rivotril', 'Tomar 1 comprimido antes de dormir', 89012, 28),
+('Sessões de terapia', 'Agendar sessões semanais para acompanhamento', 90123, 29),
+('Encaminhamento para oncologista', 'Realizar consulta com especialista para diagnóstico', 12340, 30);

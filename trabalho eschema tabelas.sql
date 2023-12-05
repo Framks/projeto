@@ -2,10 +2,8 @@ create database clinica
     OWNER = postgres
     ENCODING = 'UTF-8'
 ;
-drop database clinica;
-
 create table paciente(
-    cpf char(12) PRIMARY KEY,  
+    cpf char(11) PRIMARY KEY,  
     nome varchar(40), 
     sexo char, 
     numero_cel char(11), 
@@ -20,7 +18,7 @@ create table paciente(
 );
 
 create table medico(
-    cfm int PRIMARY KEY,
+    cfm char(11) PRIMARY KEY,
     nome varchar(40),
     email varchar(50),
     efetivado boolean,
@@ -36,7 +34,7 @@ create table medico(
 );
 
 create table recepcionista(
-    cpf int PRIMARY KEY,
+    cpf char(11) PRIMARY KEY,
     nome varchar(50),
     email varchar(50),
     senha varchar(256),
@@ -53,19 +51,19 @@ create table receita(
     id serial PRIMARY KEY,
     remedio varchar(50),
     modo_uso text,
-    cfm_medico int,
-    CONSTRAINT medico_receita FOREIGN KEY (cfm_medico) REFERENCES medico(cfm) on delete cascade
+    cfm_medico char(11),
+    id_consulta int
 );
 
 create table consulta(
     id serial PRIMARY KEY,
     obsevacao text,
     diagnostico text,
-    cfm_medico int,
-    cpf_paciente char(12),
-    id_recepcionista int, 
-    data_hora date,
-    CONSTRAINT medico_consulta FOREIGN KEY (cfm_medico) REFERENCES medico(cfm) on delete cascade,
-    CONSTRAINT paciente_consulta foreign key (cpf_paciente) REFERENCES paciente(cpf) on delete cascade,
-    CONSTRAINT recepcionista_consulta foreign key (id_recepcionista) REFERENCES recepcionista(id) on delete cascade
+    cfm_medico char(11),
+    cpf_paciente char(11),
+    id_recepcionista char(11), 
+    data_hora date
 );
+
+create view consulta_por_medico (cfm, id_consulta,cpf_paciente, data_hora) as
+select m.cfm , c.id , cpf_paciente, data_hora from consulta c join medico m on c.cfm_medico = m.cfm;
